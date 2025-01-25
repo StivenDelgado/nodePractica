@@ -38,14 +38,14 @@ async function enviarCorreosMasivos(correos) {
   console.log("Resultados del envío de correos:", resultados);
 }
 
-const correosMasivos = [
-  { destinatario: "delgadostiven123@gmail.com", asunto: "Primer correo", contenido: "Oferta especial para ti." },
-  { destinatario: "vkenda64@gmail.com", asunto: "Segundo correo", contenido: "No te pierdas nuestra oferta." },
-  { destinatario: "kendacius@gmail.com", asunto: "Tercer correo", contenido: "Descuentos imperdibles." },
+const correos = [
+  { destinatario: "delgadostiven123@gmail.com", asunto: "Primer correo", contenido: "Primer mensaje" },
+  { destinatario: "vkenda64@gmail.com", asunto: "Segundo correo", contenido: "Segundo mensaje" },
+  { destinatario: "kendacius@gmail.com", asunto: "Tercer correo", contenido: "Tercer mensaje" },
 
 ];
 
 
-enviarCorreosMasivos(correosMasivos)
-  .then(() => console.log("Envío masivo completado."))
-  .catch((error) => console.error("Error en el envío masivo:", error));
+enviarCorreosMasivos(correos)
+  .then(() => console.log("Envío completado."))
+  .catch((error) => console.error("Error en el envío:", error));

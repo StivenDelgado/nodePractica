@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Función para enviar un correo individual
+
 async function enviarCorreo(destinatario, asunto, contenido) {
   try {
     const info = await transporter.sendMail({
@@ -26,7 +26,7 @@ async function enviarCorreo(destinatario, asunto, contenido) {
   }
 }
 
-// Función principal para enviar correos masivos
+
 async function enviarCorreosMasivos(correos) {
 
   const promesas = correos.map(({ destinatario, asunto, contenido }) =>
@@ -39,9 +39,9 @@ async function enviarCorreosMasivos(correos) {
 }
 
 const correosMasivos = [
-  { destinatario: "delgadostiven123@gmail.com", asunto: "Promoción 1", contenido: "Oferta especial para ti." },
-  { destinatario: "vkenda64@gmail.com", asunto: "Promoción 2", contenido: "No te pierdas nuestra oferta." },
-  { destinatario: "kendacius@gmail.com", asunto: "Promoción 3", contenido: "Descuentos imperdibles." },
+  { destinatario: "delgadostiven123@gmail.com", asunto: "Primer correo", contenido: "Oferta especial para ti." },
+  { destinatario: "vkenda64@gmail.com", asunto: "Segundo correo", contenido: "No te pierdas nuestra oferta." },
+  { destinatario: "kendacius@gmail.com", asunto: "Tercer correo", contenido: "Descuentos imperdibles." },
 
 ];
 
